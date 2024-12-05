@@ -1,0 +1,88 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background with Image */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('istockphoto-984125648-1024x1024.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-blur: 10px;
+    position: relative;
+}
+
+/* Light Overlay Effect */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);  /* Darkens the background slightly */
+    z-index: 1;
+}
+
+/* Signup Container Styling */
+.signup-container {
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px); /* Gives a blurred glass effect */
+    z-index: 2;  /* Makes sure the signup container is above the overlay */
+    text-align: center;
+    color: #fff;
+}
+
+.signup-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Input fields styling */
+.input-container {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+/* Button styling */
+/* Adding glow effect to the button */
+.signup-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff416c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(255, 65, 108, 0.7);
+}
+
+.signup-btn:hover {
+    background-color: #ff4b2b;
+    box-shadow: 0 0 20px rgba(255, 65, 108, 1);
+}
+
+
+/* Animation Effects */
+input:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+}
